@@ -31,6 +31,7 @@ export default {
     overflow: hidden;
   }
   header{
+    width: 99vw;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -40,7 +41,7 @@ export default {
     margin-top: 5vh;
   }
   header .btnMenu{
-    z-index: 3;
+    /* z-index: 3; */
     width: 40px;
     height: 40px;
     background-image: url('../../assets/img/menu.png');

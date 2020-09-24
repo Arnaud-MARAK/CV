@@ -19,7 +19,7 @@ export default {
     }
   },
   created(){
-    // console.log(window.location.pathname)
+    console.log(this.imgUrl)
   },
 }
 </script>
@@ -27,10 +27,13 @@ export default {
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
 .card{
+  z-index: 3;
   width: 150px;
   height: 200px;
   background-color: #f4a261;
-  margin: 5px;
+  color: white;
+  border-radius: 3px;
+  margin: 10px;
   display: flex;
   flex-direction: column;
   /* justify-content: center; */
@@ -40,9 +43,12 @@ export default {
   margin-top: 10px;
 }
 .img-card{
-  border: solid red;
   margin-top: 20px;
   width: 120px;
   height: 120px;
+  object-fit: contain;
+}
+.card:hover{
+  background-color: orange;
 }
 </style>
