@@ -24,7 +24,7 @@ export default {
 
 <style scoped>
   .indexPage{
-    width: 100vw;
+    /* width: 100vw; */
     /* height: 100vh; */
     position: absolute;
     top: 0;

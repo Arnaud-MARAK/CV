@@ -1,7 +1,7 @@
 <template>
   <li class="card">
-    <h2>{{imgUrl}}</h2>
-    <div class="imgCard"></div>
+    <h3 class="title-card">{{title}}</h3>
+    <img class="img-card" :src="imgUrl" alt="card competence">
   </li>
 </template>
 
@@ -17,23 +17,32 @@ export default {
       type: String,
       default: ''
     }
-  }
+  },
+  created(){
+    // console.log(window.location.pathname)
+  },
 }
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
 .card{
-    width: 250px;
-    height: 300px;
-    background-color: #ffccff;
+  width: 150px;
+  height: 200px;
+  background-color: #f4a261;
+  margin: 5px;
+  display: flex;
+  flex-direction: column;
+  /* justify-content: center; */
+  align-items: center;
 }
-.imgCard{
-  border: solid white;
-  width: 100px;
-  height: 100px;
-  background-image: url('{{imgUrl}}');
-  background-size: contain;
-  background-repeat: no-repeat;
+.title-card{
+  margin-top: 10px;
+}
+.img-card{
+  border: solid red;
+  margin-top: 20px;
+  width: 120px;
+  height: 120px;
 }
 </style>

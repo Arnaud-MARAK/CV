@@ -4,17 +4,33 @@
       <div class="btnMenu" v-on:click="switchInMenu()"/>
     </header>
     <h1>Compétences</h1>
-    <h1>TEST
-    azbnd azid azboibazejd bazfobe fmjzaeb ofzeb fezba fuozebf uazeb fkmjzf p
-    zda *azmdzak dpoazjd poazj piaznfpiazhfioâz bfs
-    b</h1>
+    <div class="container-card">
+      <card-language class="card-container" v-for="card in listCards"
+        :key="card.title"
+        :title="card.title"
+        :imgUrl="card.imgUrl"
+      ></card-language>
+    </div>
   </div>
 </template>
 
 <script>
 
+import CardLanguage from '../CardLanguage.vue';
+
 export default {
   name: 'ContactPage',
+  components: {
+    CardLanguage
+  },
+  data: function() {
+    return{
+      listCards: [
+        { title: "Python", imgUrl: '../assets/img/python.png' },
+        { title: "Java", imgUrl: '../assets/img/java.png' }
+      ]
+    }
+  },
   methods: {
     switchInMenu() {
       this.$emit('back');
@@ -33,12 +49,13 @@ export default {
   display: flex;
   flex-direction: column;
   align-items: center;
+  /* border: solid black; */
 }
 header{
-  width: 100%;
   display: flex;
   justify-content: flex-end;
   align-items: center;
+  width: 100%;
   height: 20vh;
 }
 header .btnMenu{
@@ -52,5 +69,13 @@ header .btnMenu{
 h1{
   margin-top: 2vh;
   width: 5vw;
+}
+.container-card{
+  border: solid red;
+  margin-top: 5vh;
+  margin-left: 12vw;
+  width: 70%;
+  display: flex;
+  /* height: 20vh; */
 }
 </style>

@@ -56,8 +56,8 @@ export default {
   mounted(){
     // this.switchInIndex()
     // this.switchInParcours()
-    // this.switchInCompetences()
-    this.switchInContact()
+    this.switchInCompetences()
+    // this.switchInContact()
   },
   methods: {
     switchInMenuFromIndex(){
@@ -108,9 +108,10 @@ export default {
   body{
     /* background-color: #f5eded; */
     font-family: 'Bookman', sans-serif;
-    width: 100vw;
+    /* width: 100vw; */
     overflow-x: hidden;
     background-color: white;
+    /* border: solid red; */
   }
 
   .page{
@@ -137,7 +138,49 @@ export default {
     align-items: center;
   }
   .menuPage li:hover{
-    text-decoration: underline;
+    border-bottom: solid white;
+    /* animation-name: animationNav; */
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in;
+  }
+  .menuPage li::after{
+    /* content: '';
+    background-color: red;
+    width: 35%;
+    height: 7px;
+    position: absolute;
+    bottom: 0%;
+    left: 50%; */
   }
 
+
+@keyframes animationNav{
+  0%{
+    border-bottom: solid black;
+  }
+  5%{
+    border-bottom: solid white;
+  }
+  100%{
+    border-bottom: solid black;
+  }
+}
+@keyframes hoverCards{
+    0%{
+        transform: translateY(0px);
+    }
+    25%{
+        transform: translateY(-10px);
+    }
+    50%{
+        transform: translateY(0px);
+    }
+    75%{
+        transform: translateY(10px);  
+    }
+    100%{
+        transform: translateY(0px);
+    }
+}
 </style>

@@ -1,10 +1,12 @@
 <template>
+  <div class="webpage">
     <svg class="svgPage" :width="widthPage" :height="heightPage" :max-width="widthPage">
 
       <!-- LeftBot LeftTop RightTop MidTop RightBot !-->
       <!-- 0,0 0,0 215,110 215,55 !-->
       <polygon class="polymorph" points="215,110 0,110 0,0 47.7,0 215,0"/>
     </svg>
+  </div>
 </template>
 
 <script>
@@ -174,12 +176,13 @@ export default {
 <style scoped>
  .webpage{
     position: absolute;
-    /* height: 100vh; 
-    width: 99vw; */
+    width: 100%;
     overflow: hidden;
-    /* border: solid red; */
+    /* border: solid yellow; */
   }
   .svgPage{
+    /* display: none; */
+    /* border: solid black; */
   }
   .polymorph{
     fill: #29ABE2;
