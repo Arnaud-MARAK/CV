@@ -175,16 +175,20 @@ export default {
 
 <style scoped>
  .webpage{
+    background-color: #f5eded;
+    /* background-color: #e6e6e6; */
+    /* background-color: white; */
     position: absolute;
     width: 100%;
     overflow: hidden;
-    /* border: solid yellow; */
   }
   .svgPage{
     /* display: none; */
     /* border: solid black; */
   }
   .polymorph{
-    fill: #29ABE2;
+    /* fill: #29ABE2; */
+    fill: #446491;
+    /* fill: #ffab1a; */
   }
 </style>

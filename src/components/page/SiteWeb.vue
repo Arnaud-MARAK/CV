@@ -54,9 +54,9 @@ export default {
     }
   },
   mounted(){
-    // this.switchInIndex()
+    this.switchInIndex()
     // this.switchInParcours()
-    this.switchInCompetences()
+    // this.switchInCompetences()
     // this.switchInContact()
   },
   methods: {
@@ -106,12 +106,10 @@ export default {
 
 <style scoped>
   body{
-    /* background-color: #f5eded; */
+    background-color: #f5eded;
+    /* background-color: white; */
     font-family: 'Bookman', sans-serif;
-    /* width: 100vw; */
     overflow-x: hidden;
-    background-color: white;
-    /* border: solid red; */
   }
 
   .page{
@@ -136,6 +134,7 @@ export default {
     display: flex;
     flex-direction: column;
     align-items: center;
+    color: #f5eded;
   }
   .menuPage li:hover{
     border-bottom: solid white;

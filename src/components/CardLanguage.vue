@@ -1,7 +1,18 @@
 <template>
-  <li class="card">
-    <h3 class="title-card">{{title}}</h3>
-    <img class="img-card" :src="imgUrl" alt="card competence">
+  <li class="cardcontainer">
+    <div class="thecard">
+
+      <div class="thefront">
+        <!-- <div class="imgCard"></div> -->
+        <img class="img-card" :src="imgUrl" alt="card competence">
+        <h1>{{title}}</h1>
+      </div>
+
+      <div class="theback">
+        <p>Ceci est une description de {{title}}</p>
+        <a :href=wikipedia target="_blank">Wikipedia</a>
+      </div>
+    </div>
   </li>
 </template>
 
@@ -16,6 +27,10 @@ export default {
     imgUrl: {
       type: String,
       default: ''
+    },
+    wikipedia: {
+      type: String,
+      default: ''
     }
   },
   created(){
@@ -26,29 +41,88 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
-.card{
-  z-index: 3;
-  width: 150px;
-  height: 200px;
-  background-color: #f4a261;
+li{
+  list-style: none;
+  margin: 1vw;
+}
+.cardcontainer{
+  width: 200px;
+  height: 220px;
+  background: none;
+}
+.thecard{
+  position: relative;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+  overflow: hidden;
+}
+.thefront{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+  backface-visibility: hidden;
+  overflow: hidden;
+  background: #29ABE2;
   color: white;
-  border-radius: 3px;
-  margin: 10px;
   display: flex;
   flex-direction: column;
-  /* justify-content: center; */
   align-items: center;
-}
-.title-card{
-  margin-top: 10px;
+  justify-content: flex-end;
 }
 .img-card{
-  margin-top: 20px;
-  width: 120px;
-  height: 120px;
+  height: 150px;
+  width: 150px;
   object-fit: contain;
 }
-.card:hover{
-  background-color: orange;
+.theback{
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+  overflow: hidden;
+  background: #1885b4;
+  color: #fff;
+  text-align: center;
+}
+.thecard:hover > .theback{
+  animation-name: hoverCard;
+  animation-timing-function: ease;
+  animation-duration: 1s;
+}
+.theback:hover{
+  top: 0%;
+} 
+.theback a{
+  color: white;
+}
+.thefront h1{
+  font-family: 'zilla slab', sans-serif;
+  font-weight: bold;
+  font-size: 20px;
+  margin: 10px 0;
+  text-align: center;
+}
+.theback p{
+  font-family: 'zilla slab', sans-serif;
+  padding: 15px;
+  font-weight: normal;
+  font-size: 13px;
+}
+@keyframes hoverCard{
+  0% {
+    top: 100%;
+  }
+
+  100%{
+    top: 0%;
+  }
 }
 </style>

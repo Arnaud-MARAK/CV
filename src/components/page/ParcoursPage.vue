@@ -1,7 +1,11 @@
 <template>
   <div class="parcoursPage">
     <header>
-        <div class="btnMenu" v-on:click="switchInMenu()"/>
+        <div class="btnMenu" v-on:click="switchInMenu()">
+          <div class="barre-hamburger"></div>
+          <div class="barre-hamburger"></div>
+          <div class="barre-hamburger"></div>
+        </div>
     </header>
     <div class="title">
       <h1>Mon parcours</h1>
@@ -31,9 +35,9 @@
                 domaine dans lequel j'ai toujours éprouvé un fort intérêt, pour poursuivre mes études. J'ai aussi dû durant cette période
                 réalisé un stage de 11 semaines à l'agence web 
                 <a href="https://www.dnconsultants.fr/" target="_blank" style="font-weight: bold; font-size: 14px;">DN Consultants</a> situé à Strasbourg.
-                Ce stage m'a permit d'avoir une première expérience professionnelle dans le développement web, domaine que j'affectais. 
+                Ce stage m'a permit d'avoir une première expérience professionnelle dans le développement web, domaine que j'affectais particulièrement. 
             </p>
-            <a  href="https://iutrs.unistra.fr/formation/dut" target="_blank"><h5>Site web de la formation</h5></a>
+            <a  href="https://iutrs.unistra.fr/formation/dut/dut-informatique" target="_blank"><h5>Site web de la formation</h5></a>
             </div>
         </li>
         <li>
@@ -42,7 +46,7 @@
                 <p>2020-2021 - Licence Pro CDAD</p>
             </time>
             <p>
-                Puis je me suis spécialisé dans le développement web et d'applications en réalisant la Licence Professionnelle CDAD
+                Puis je me suis spécialisé dans le développement web et d'applications en intégrant la Licence Professionnelle CDAD
                 (Conception et Développement d'Applications Distribuées) de l'IUT Robert Schuman à Illkirch. Je suis en train de faire cette licence en 
                 alternance dans l'agence web 
                 <a href="https://www.dnconsultants.fr/" target="_blank" style="font-weight: bold; font-size: 14px;">DN Consultants</a> situé à Strasbourg.
@@ -112,6 +116,7 @@ export default {
   justify-content: center;
   align-items: center;
   /* overflow: hidden; */
+  z-index: 3;
 }
 header{
   width: 100%;
@@ -120,21 +125,45 @@ header{
   align-items: center;
   height: 20vh;
 }
-header .btnMenu{
-  z-index: 3;
-  width: 40px;
-  height: 40px;
-  background-image: url('../../assets/img/menu.png');
-  background-size: cover;
-  margin-right: 5vw;
-}
 .title {
   font-size: 30px;
   height: 20vh;
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
-  aligne-items: flex-end;
+  align-items: flex-end;
+  z-index: 3;
+}
+header .btnMenu{
+  z-index: 3;
+  width: 60px;
+  background-size: cover;
+  margin-right: 5vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.barre-hamburger{
+  width: 50px;
+  border-top: 4px solid black;
+  margin-top: 15px;
+}
+header .btnMenu:hover > .barre-hamburger{
+  animation-name: animationHamburger;
+  animation-duration: 1s;
+  margin-top: 10px;
+  width: 66%;
+}
+@keyframes animationHamburger{
+  0%{
+    margin-top: 15px;
+    width: 100%;
+  }
+  100%{
+    margin-top: 10px;
+    width: 66%;
+  }
 }
 
 /* TIMELINE
@@ -174,6 +203,7 @@ header .btnMenu{
   width: 400px;
   padding: 15px;
   background: #29ABE2;
+  /* background-color: #446491; */
 }
 .timeline ul li div::before {
   content: '';
@@ -221,7 +251,8 @@ header .btnMenu{
   transition: background .5s ease-in-out;
 }
 .timeline ul li.in-view::after {
-  background: #29ABE2;
+  /* background: #29ABE2; */
+  background-color: #446491;
 }
 .timeline ul li div {
   visibility: hidden;

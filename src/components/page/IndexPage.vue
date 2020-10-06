@@ -5,7 +5,11 @@
         <h1>Arnaud Marak</h1>
         <h2>Développeur Web et Application Distribuées</h2>
       </div>
-      <div class="btnMenu" v-on:click="switchInMenu()"/>
+      <div class="btnMenu" v-on:click="switchInMenu()">
+        <div class="barre-hamburger"></div>
+        <div class="barre-hamburger"></div>
+        <div class="barre-hamburger"></div>
+      </div>
     </header>
   </div>
 </template>
@@ -40,14 +44,6 @@ export default {
     margin-left: 10vw;
     margin-top: 5vh;
   }
-  header .btnMenu{
-    /* z-index: 3; */
-    width: 40px;
-    height: 40px;
-    background-image: url('../../assets/img/menu.png');
-    background-size: cover;
-    margin-right: 5vw;
-  }
   h1{
     font-size: 50px;
   }
@@ -55,5 +51,35 @@ export default {
     font-size: 35px;
     margin-top: 4vh;
     margin-left: 10vw;
+  }
+  header .btnMenu{
+    width: 60px;
+    background-size: cover;
+    margin-right: 5vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .barre-hamburger{
+    width: 50px;
+    border-top: 4px solid black;
+    margin-top: 15px;
+  }
+  header .btnMenu:hover > .barre-hamburger{
+    animation-name: animationHamburger;
+    animation-duration: 1s;
+    margin-top: 10px;
+    width: 66%;
+  }
+  @keyframes animationHamburger{
+    0%{
+      margin-top: 15px;
+      width: 100%;
+    }
+    100%{
+      margin-top: 10px;
+      width: 66%;
+    }
   }
 </style>
