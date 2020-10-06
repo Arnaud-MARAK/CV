@@ -163,6 +163,7 @@ header{
   height: 30vh;
 }
 header .btnMenu{
+  z-index: 3;
   width: 60px;
   background-size: cover;
   margin-right: 5vw;
