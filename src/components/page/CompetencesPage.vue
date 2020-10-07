@@ -16,6 +16,7 @@
         :title="card.title"
         :imgUrl="card.imgUrl"
         :wikipedia="card.wikipedia"
+        :description="card.description"
       ></card-language>
     </div>
   </div>
@@ -36,100 +37,105 @@ export default {
         { 
           title: "HTML",
           imgUrl: 'https://www.w3.org/html/logo/downloads/HTML5_Logo_512.png',
-          description: '',
+          description: 'HTML est un langage de balise qui permet de créer et de représenter le contenu et la structure d\'une page web.',
           wikipedia: 'https://fr.wikipedia.org/wiki/HTML5'
         },
         { 
           title: "CSS", 
           imgUrl: 'https://upload.wikimedia.org/wikipedia/commons/thumb/d/d5/CSS3_logo_and_wordmark.svg/1200px-CSS3_logo_and_wordmark.svg.png',
-          description: '',
+          description: 'CSS est un langage informatique qui permet de gérer le design d\'une page web.',
           wikipedia: 'https://fr.wikipedia.org/wiki/Feuilles_de_style_en_cascade'  
         },
         { 
-          title: "JS", 
+          title: "JavaScript", 
           imgUrl: 'https://upload.wikimedia.org/wikipedia/commons/thumb/b/b6/Badge_js-strict.svg/555px-Badge_js-strict.svg.png',
-          description: '',
+          description: 'JavaScript est un langage de script qui va permettre d\'intéragir avec l\'internaute depuis une page web.',
           wikipedia: 'https://fr.wikipedia.org/wiki/JavaScript'  
         },
         { 
           title: 'Bootstrap', 
           imgUrl: 'https://sdtimes.com/wp-content/uploads/2018/01/bootstrap-stack.png',
-          description: '',
+          description: 'Bootstrap est un framework qui permet de concevoir plus rapidement un design responsive d\'une page web.',
           wikipedia: 'https://fr.wikipedia.org/wiki/Bootstrap_(framework)'
         },
         { 
-          title: "Node", 
+          title: "Node.js", 
           imgUrl: 'https://upload.wikimedia.org/wikipedia/commons/thumb/d/d9/Node.js_logo.svg/1200px-Node.js_logo.svg.png',
-          description: '',
+          description: 'Node.js est un framework qui permet de gérer le coté serveur d\'une page web avec JavaScript.',
           wikipedia: 'https://fr.wikipedia.org/wiki/Node.js'
         },
         { 
-          title: "Vue", 
+          title: "Vue.js", 
           imgUrl: 'https://upload.wikimedia.org/wikipedia/commons/thumb/9/95/Vue.js_Logo_2.svg/1200px-Vue.js_Logo_2.svg.png',
-          description: '',
+          description: 'Vue est un framework qui permet de programmer l\'interface visuel d’un site web.',
           wikipedia: 'https://fr.wikipedia.org/wiki/Vue.js'
         },
         { 
-          title: "React", 
+          title: "React.js", 
           imgUrl: 'https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/React-icon.svg/1200px-React-icon.svg.png',
-          description: '',
+          description: 'Vue est un framework qui permet de programmer l\'interface visuel d’un site web.',
           
           wikipedia: 'https://fr.wikipedia.org/wiki/React_(JavaScript)'  
         },
         { 
           title: "PHP", 
           imgUrl: 'https://upload.wikimedia.org/wikipedia/commons/thumb/2/27/PHP-logo.svg/1280px-PHP-logo.svg.png',
-          description: '',
-          
+          description: 'PHP est un langage de programmation pour développer le coté serveur d\'une page web.',
           wikipedia: 'https://fr.wikipedia.org/wiki/PHP' 
         },
         { 
           title: "Symfony", 
           imgUrl: 'https://cdn.freebiesupply.com/logos/thumbs/2x/symfony-logo.png',
-          description: '',
-          wikipedia: 'https://fr.wikipedia.org/wiki/Symfony'
+          description: 'Symfony est un framework qui permet d\'accélerer le développement d\'un site ou d\'une application web à l\'aide de PHP.',
+          wikipedia: 'https://fr.wikipedia.org/wiki/Symfony',
+        },
+        {
+          title: 'Wordpress',
+          imgUrl: 'https://upload.wikimedia.org/wikipedia/commons/thumb/9/98/WordPress_blue_logo.svg/1200px-WordPress_blue_logo.svg.png',
+          description: 'Wordpress est un logiciel de système de gestion de contenu qui permet de créer des sites internets complets.',
+          wikipedia: 'https://fr.wikipedia.org/wiki/WordPress'
         },
         { 
           title: "Python", 
           imgUrl: 'https://upload.wikimedia.org/wikipedia/commons/thumb/c/c3/Python-logo-notext.svg/1200px-Python-logo-notext.svg.png',
-          description: '',
+          description: 'Python est un langage de programmation orienté objet, il est polyvalent et très utilisés dans le BigData, le calcul numérique et les scripts.',
           wikipedia: 'https://fr.wikipedia.org/wiki/Python_%28langage%29'
         },
         { 
           title: "Java", 
           imgUrl: 'https://www.softexia.com/wp-content/uploads/2017/04/Java-logo.png',
-          description: '',
+          description: 'Java est un langage de programmation orienté objet, il est polyvalent et permet de créer des applications complètes sur n\'importe quel système.',
           
           wikipedia: 'https://fr.wikipedia.org/wiki/Java_(technique)'
         },
         { 
           title: "Android Studio", 
           imgUrl: 'https://appjoy.org/wp-content/uploads/2016/05/Android-Studio-Logo.png',
-          description: '',
+          description: 'Android Studio est un logiciel qui permet de développer des application android.',
           wikipedia: 'https://fr.wikipedia.org/wiki/Android_Studio'
         },
         { 
           title: "PL/SQL", 
           imgUrl: 'https://metamug.com/article/images/pl-sql-database.jpg',
-          description: '',
+          description: 'PL/SQL est un langage de programmation qui permet de manipuler des bases de données.',
           wikipedia: 'https://fr.wikipedia.org/wiki/PL/SQL'
         },
         { 
           title: "C#", 
           imgUrl: 'https://www.onlinebooksreview.com/uploads/blog_images/2018/01/27_c-sharp-logo-filled.png',
-          description: '',
+          description: 'C# est un langage de programmation orienté objet, il est robuste et sécurisé et permet de créer des applications complètes.',
           wikipedia: 'https://fr.wikipedia.org/wiki/C_sharp'
         },
         { 
           title: "Bash", 
           imgUrl: 'https://raw.githubusercontent.com/odb/official-bash-logo/master/assets/Logos/Icons/PNG/512x512.png',
-          description: '',
+          description: 'Bash est un langage script qui permet d\'interpréter et d\'utiliser des commandes Linux.',
           wikipedia: 'https://fr.wikipedia.org/wiki/Bourne-Again_shell'
         },
         { 
           title: "Git", 
           imgUrl: 'https://git-scm.com/images/logos/downloads/Git-Icon-Black.png',
-          description: '',
+          description: 'Git est un logiciel de gestions de versions libre qui permet à plusieurs personnes de programmer sur le même projet en même temps.',
           wikipedia: 'https://fr.wikipedia.org/wiki/Git'
         }
       ]
@@ -179,7 +185,8 @@ header .btnMenu{
 }
 header .btnMenu:hover > .barre-hamburger{
   animation-name: animationHamburger;
-  animation-duration: 1s;
+  animation-duration: 0.8s;
+  animation-timing-function: ease;
   margin-top: 10px;
   width: 66%;
 }

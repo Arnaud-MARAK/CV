@@ -68,7 +68,8 @@ export default {
   }
   header .btnMenu:hover > .barre-hamburger{
     animation-name: animationHamburger;
-    animation-duration: 1s;
+    animation-duration: 0.8s;
+    animation-timing-function: ease;
     margin-top: 10px;
     width: 66%;
   }

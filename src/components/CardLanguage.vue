@@ -3,13 +3,13 @@
     <div class="thecard">
 
       <div class="thefront">
-        <!-- <div class="imgCard"></div> -->
+        <!-- <div class="img-card" :style="{backgroundImage:`url(${imgUrl})`}"></div> -->
         <img class="img-card" :src="imgUrl" alt="card competence">
         <h1>{{title}}</h1>
       </div>
 
       <div class="theback">
-        <p>Ceci est une description de {{title}}</p>
+        <p>{{description}}</p>
         <a :href=wikipedia target="_blank">Wikipedia</a>
       </div>
     </div>
@@ -31,6 +31,10 @@ export default {
     wikipedia: {
       type: String,
       default: ''
+    },
+    description: {
+      type: String,
+      default: '',
     }
   },
   created(){

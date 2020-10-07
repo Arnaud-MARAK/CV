@@ -9,7 +9,7 @@
           <li v-on:click="switchInIndex()">Accueil</li>
           <li v-on:click="switchInParcours()">Parcours</li>
           <li v-on:click="switchInCompetences()">Compétences</li>
-          <li>Projets</li>
+          <!-- <li>Projets</li> -->
           <li v-on:click="switchInContact()">Contact</li>
         </ul>
       </nav>
@@ -54,9 +54,9 @@ export default {
     }
   },
   mounted(){
-    this.switchInIndex()
+    // this.switchInIndex()
     // this.switchInParcours()
-    // this.switchInCompetences()
+    this.switchInCompetences()
     // this.switchInContact()
   },
   methods: {
