@@ -38,7 +38,7 @@ export default {
     }
   },
   created(){
-    console.log(this.imgUrl)
+    // console.log(this.imgUrl)
   },
 }
 </script>
@@ -48,11 +48,6 @@ export default {
 li{
   list-style: none;
   margin: 1vw;
-}
-.cardcontainer{
-  width: 200px;
-  height: 220px;
-  background: none;
 }
 .thecard{
   position: relative;
@@ -79,11 +74,6 @@ li{
   align-items: center;
   justify-content: flex-end;
 }
-.img-card{
-  height: 150px;
-  width: 150px;
-  object-fit: contain;
-}
 .theback{
   position: absolute;
   top: 100%;
@@ -102,6 +92,14 @@ li{
   animation-duration: 1s;
 }
 .theback:hover{
+  top: 0%;
+} 
+.thecard:root > .theback{
+  animation-name: hoverCard;
+  animation-timing-function: ease;
+  animation-duration: 1s;
+}
+.theback:root{
   top: 0%;
 } 
 .theback a{
@@ -127,6 +125,68 @@ li{
 
   100%{
     top: 0%;
+  }
+}
+
+@media (max-width: 680px) {
+  .cardcontainer{
+    width: 90px;
+    height: 130px;
+    background: none;
+  }
+  .img-card{
+    height: 70px;
+    width: 70px;
+    object-fit: contain;
+  }
+  .thefront h1{
+    font-size: 12px;
+    margin: 10px 0;
+  }
+  .theback{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .theback p{
+    display: none;
+  }
+  .theback a{
+    font-size: 12px;
+  }
+}
+
+@media (min-width: 681px) and (max-width: 1279px) {
+  .cardcontainer{
+    width: 180px;
+    height: 205px;
+    background: none;
+  }
+  .img-card{
+    height: 140px;
+    width: 140px;
+    object-fit: contain;
+  }
+  .thefront h1{
+    font-size: 18px;
+    margin: 10px 0;
+  }
+}
+
+@media (min-width: 1280px) {
+  .cardcontainer{
+    width: 200px;
+    height: 220px;
+    background: none;
+  }
+  .img-card{
+    height: 150px;
+    width: 150px;
+    object-fit: contain;
+  }
+  .thefront h1{
+    font-size: 20px;
+    margin: 10px 0;
   }
 }
 </style>

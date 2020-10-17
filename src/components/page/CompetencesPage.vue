@@ -10,8 +10,8 @@
     <div class="title">
       <h1>Compétences</h1>
     </div>
-    <div class="container-card">
-      <card-language class="card-container" v-for="card in listCards"
+    <div class="container-cards">
+      <card-language class="card" v-for="card in listCards"
         :key="card.title"
         :title="card.title"
         :imgUrl="card.imgUrl"
@@ -170,7 +170,7 @@ header{
 }
 header .btnMenu{
   z-index: 3;
-  width: 60px;
+  width: 50px;
   background-size: cover;
   margin-right: 5vw;
   display: flex;
@@ -179,7 +179,7 @@ header .btnMenu{
   align-items: center;
 }
 .barre-hamburger{
-  width: 50px;
+  width: 100%;
   border-top: 4px solid black;
   margin-top: 15px;
 }
@@ -191,20 +191,18 @@ header .btnMenu:hover > .barre-hamburger{
   width: 66%;
 }
 .title{
-  margin-top: 2vh;
+  /* margin-top: 2vh; */
   margin-left: 5vw;
   font-size: 30px;
   z-index: 3;
 }
-.container-card{
-  /* border: solid red; */
+.container-cards{
   margin-top: 5vh;
   margin-left: 5vw;
   width: 70%;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  /* height: 20vh; */
 }
 
 @keyframes animationHamburger{
@@ -215,6 +213,51 @@ header .btnMenu:hover > .barre-hamburger{
   100%{
     margin-top: 10px;
     width: 66%;
+  }
+}
+
+@keyframes animationHamburgerSmall{
+  0%{
+    margin-top: 7px;
+    width: 100%;
+  }
+  100%{
+    margin-top: 5px;
+    width: 66%;
+  }
+}
+
+@media (max-width: 680px) {
+  header{
+    height: 20vh;
+  }
+  h1{
+    font-size: 30px;
+    margin-top: 5vh;
+  }
+  header .btnMenu{
+    width: 30px;
+  }
+  .barre-hamburger{
+    border-top: 2px solid black;
+    margin-top: 7px;
+  }
+  header .btnMenu:hover > .barre-hamburger{
+    animation-name: animationHamburgerSmall;
+    margin-top: 5px;
+    width: 66%;
+  }
+}
+
+@media (min-width: 681px) and (max-width: 1279px) {
+  h1{
+      font-size: 40px;
+  }
+}
+
+@media (min-width: 1280px) {
+  h1{
+    font-size: 50px;
   }
 }
 </style>

@@ -56,8 +56,8 @@ export default {
   mounted(){
     // this.switchInIndex()
     // this.switchInParcours()
-    // this.switchInCompetences()
-    this.switchInContact()
+    this.switchInCompetences()
+    // this.switchInContact()
   },
   methods: {
     switchInMenuFromIndex(){

@@ -58,9 +58,9 @@ export default {
     width: 100%;
   }
   header .btnMenu:hover > .barre-hamburger{
-      animation-duration: 0.8s;
-      animation-timing-function: ease;
-    }
+    animation-duration: 0.8s;
+    animation-timing-function: ease;
+  }
   @keyframes animationHamburger{
     0%{
       margin-top: 15px;
@@ -99,7 +99,7 @@ export default {
       margin-top: 12vh;
     }
     header .btnMenu{
-      width: 40px;
+      width: 45px;
       margin-right: 5vw;
       margin-top: 4vh;
     }
@@ -124,7 +124,7 @@ export default {
       margin-left: 12vw;
     }
     header .btnMenu{
-      width: 45px;
+      width: 50px;
       margin-left: 4vw;
     }
     .barre-hamburger{
