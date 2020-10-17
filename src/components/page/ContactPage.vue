@@ -49,7 +49,7 @@ header{
 header .btnMenu{
   width: 60px;
   background-size: cover;
-  margin-right: 5vw;
+  margin-right: 4vw;
   display: flex;
   flex-direction: column;
   justify-content: center;

@@ -56,8 +56,8 @@ export default {
   mounted(){
     // this.switchInIndex()
     // this.switchInParcours()
-    this.switchInCompetences()
-    // this.switchInContact()
+    // this.switchInCompetences()
+    this.switchInContact()
   },
   methods: {
     switchInMenuFromIndex(){
@@ -143,15 +143,6 @@ export default {
     animation-iteration-count: infinite;
     animation-timing-function: ease-in;
   }
-  .menuPage li::after{
-    /* content: '';
-    background-color: red;
-    width: 35%;
-    height: 7px;
-    position: absolute;
-    bottom: 0%;
-    left: 50%; */
-  }
 
 
 @keyframes animationNav{
@@ -181,5 +172,23 @@ export default {
     100%{
         transform: translateY(0px);
     }
+}
+
+@media (max-width: 680px) {
+  .menuPage{
+    font-size: 17px;
+  }
+}
+
+@media (min-width: 681px) and (max-width: 1279px) {
+  .menuPage{
+    font-size: 23px;
+  }
+}
+
+@media (min-width: 1280px) {
+  .menuPage{
+    font-size: 25px;
+  }
 }
 </style>

@@ -185,7 +185,7 @@ header .btnMenu{
 }
 header .btnMenu:hover > .barre-hamburger{
   animation-name: animationHamburger;
-  animation-duration: 0.8s;
+  animation-duration: 0.7s;
   animation-timing-function: ease;
   margin-top: 10px;
   width: 66%;
