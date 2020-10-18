@@ -129,14 +129,13 @@ header{
   font-size: 30px;
   height: 20vh;
   display: flex;
-  flex-direction: column;
   justify-content: flex-end;
   align-items: flex-end;
   z-index: 3;
 }
 header .btnMenu{
   z-index: 3;
-  width: 60px;
+  width: 50px;
   background-size: cover;
   margin-right: 5vw;
   display: flex;
@@ -145,7 +144,7 @@ header .btnMenu{
   align-items: center;
 }
 .barre-hamburger{
-  width: 50px;
+  width: 100%;
   border-top: 4px solid black;
   margin-top: 15px;
 }
@@ -166,18 +165,26 @@ header .btnMenu:hover > .barre-hamburger{
     width: 66%;
   }
 }
+@keyframes animationHamburgerSmall{
+  0%{
+    margin-top: 7px;
+    width: 100%;
+  }
+  100%{
+    margin-top: 5px;
+    width: 66%;
+  }
+}
 
 /* TIMELINE
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
 .timeline {
     color: white;
     margin-top: 10vh;
-
 }
 .timeline ul {
   background: #cbd6e7;
   padding: 50px 0;
-
 }
 .timeline ul li {
   list-style-type: none;
@@ -245,59 +252,108 @@ header .btnMenu:hover > .barre-hamburger{
   margin-bottom: 10px;
 }
 
-/* EFFECTS
+/* EFFECTS and MEDIA QUERIES
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
 
-.timeline ul li::after {
-  transition: background .5s ease-in-out;
-}
-.timeline ul li.in-view::after {
-  /* background: #29ABE2; */
-  background-color: #446491;
-}
-.timeline ul li div {
-  visibility: hidden;
-  opacity: 0;
-  transition: all .5s ease-in-out;
-}
-.timeline ul li:nth-child(odd) div {
-  transform: translate3d(200px, 0, 0);
-}
-.timeline ul li:nth-child(even) div {
-  transform: translate3d(-200px, 0, 0);
-}
-.timeline ul li.in-view div {
-  transform: none;
-  visibility: visible;
-  opacity: 1;
-}
-
-/* GENERAL MEDIA QUERIES
-–––––––––––––––––––––––––––––––––––––––––––––––––– */
-
-@media screen and (max-width: 900px) {
-  .timeline ul li div {
-    width: 250px;
+@media (max-width: 680px) {
+  h1{
+    font-size: 30px;
+    position: absolute;
+    width: 100vw;
+    left: 10px;
   }
-  .timeline ul li:nth-child(even) div {
-    left: -289px;
-    /*250+45-6*/
+  header .btnMenu{
+    width: 30px;
   }
-}
-@media screen and (max-width: 600px) {
-  .timeline ul li {
-    margin-left: 20px;
+  .barre-hamburger{
+    border-top: 2px solid black;
+    margin-top: 7px;
+  }
+  header .btnMenu:hover > .barre-hamburger{
+    animation-name: animationHamburgerSmall;
+    margin-top: 5px;
+    width: 66%;
+  }
+  .timeline {
+    margin-left: 42vw;
+  }   
+  .timeline ul {
+    width: 0px;
+  }
+  .timeline ul li::after {
+    width: 15px;
+    height:15px;
   }
   .timeline ul li div {
-    width: calc(100vw - 91px);
+    width: 200px;
+    padding: 10px;
+    font-size: 13px;
+  }
+  .timeline time {
+    font-size: 16px;
+    font-weight: bold;
+    margin-bottom: 5px;
+    display: flex;
+    align-items: center;
+  }
+  .timeline p a, h5 {
+    font-size: 13px;
+  }
+  .timeline ul li:nth-child(odd) div {
+    left: -230px;
   }
   .timeline ul li:nth-child(even) div {
-    left: 45px;
+    left: -230px;
   }
   .timeline ul li:nth-child(even) div::before {
-    left: -15px;
-    border-width: 8px 16px 8px 0;
-    border-color: transparent #29ABE2 transparent transparent;
+    left: 200px;
+    transform: rotate(180deg);
+    /* border-width: 8px 0 8px 16px; */
+  }
+  .timeline ul li::after {
+    background-color: #446491;
+  }
+  .timeline ul li.in-view::after {
+    background-color: #446491;
   }
 }
+
+@media (min-width: 681px) {
+  .timeline ul li::after {
+    transition: background .5s ease-in-out;
+    background-color: #446491;
+  }
+  .timeline ul li.in-view::after {
+    background-color: #446491;
+  }
+  .timeline ul li div {
+    visibility: hidden;
+    opacity: 0;
+    transition: all .5s ease-in-out;
+  }
+  .timeline ul li:nth-child(odd) div {
+    transform: translate3d(200px, 0, 0);
+  }
+  .timeline ul li:nth-child(even) div {
+    transform: translate3d(-200px, 0, 0);
+  }
+  .timeline ul li.in-view div {
+    transform: none;
+    visibility: visible;
+    opacity: 1;
+  }
+}
+
+@media (min-width: 681px) and (max-width: 1279px) {
+  h1{
+      font-size: 40px;
+  }
+}
+
+@media (min-width: 1280px) {
+  h1{
+    font-size: 50px;
+  }
+}
+
 </style>

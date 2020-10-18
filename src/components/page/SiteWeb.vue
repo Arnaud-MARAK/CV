@@ -54,9 +54,9 @@ export default {
     }
   },
   mounted(){
-    // this.switchInIndex()
+    this.switchInIndex()
     // this.switchInParcours()
-    this.switchInCompetences()
+    // this.switchInCompetences()
     // this.switchInContact()
   },
   methods: {
@@ -81,21 +81,25 @@ export default {
       this.showMenu = true
     },
     switchInIndex(){
+      document.querySelectorAll('title')[0].textContent = 'Accueil';
       this.$refs.transition.switchInIndex()
       this.showMenu = false
       this.showIndex = true
     },
     switchInParcours(){
       this.$refs.transition.switchInParcours()
+      document.querySelectorAll('title')[0].textContent = 'Parcours';
       this.showMenu = false
       this.showParcours = true
     },
     switchInCompetences(){
+      document.querySelectorAll('title')[0].textContent = 'Compétences';
       this.$refs.transition.switchInCompetences()
       this.showMenu = false
       this.showCompetences = true
     },
     switchInContact(){
+      document.querySelectorAll('title')[0].textContent = 'Contact';
       this.$refs.transition.switchInContact()
       this.showMenu = false
       this.showContact = true

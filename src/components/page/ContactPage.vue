@@ -48,9 +48,8 @@ header{
 }
 header .btnMenu{
   position: absolute;
-  right: 4vw;
   background-size: cover;
-  margin-right: 4vw;
+  right: 5vw;
   display: flex;
   flex-direction: column;
   justify-content: center;

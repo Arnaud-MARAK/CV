@@ -22,6 +22,9 @@ export default {
         { id: 3, name: 'PL/SQL', imgUrl: '../assets/img/java.png' }
       ]
     }
+  },
+  mounted(){
+    console.log('COOL MEC')
   }
 }
 </script>

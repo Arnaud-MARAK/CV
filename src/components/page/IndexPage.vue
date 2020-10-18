@@ -1,5 +1,6 @@
 <template>
   <div class="indexPage">
+    <title>Arnaud MARAK</title>
     <header>
       <div class="titles">
         <h1>Arnaud Marak</h1>
