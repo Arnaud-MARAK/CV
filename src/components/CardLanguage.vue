@@ -67,7 +67,8 @@ li{
   border-radius: 10px;
   backface-visibility: hidden;
   overflow: hidden;
-  background: #29ABE2;
+  /* background-color: #29ABE2; */
+  background-color: #ffab1a;
   color: white;
   display: flex;
   flex-direction: column;
@@ -82,7 +83,8 @@ li{
   height: 100%;
   border-radius: 10px;
   overflow: hidden;
-  background: #1885b4;
+  /* background: #1885b4; */
+  background-color: #ff5f1a;
   color: #fff;
   text-align: center;
 }
