@@ -6,11 +6,11 @@
     <div v-if="showMenu" class="menuPage">
       <nav>
         <ul>
-          <li v-on:click="switchInIndex()">Accueil</li>
-          <li v-on:click="switchInParcours()">Parcours</li>
-          <li v-on:click="switchInCompetences()">Compétences</li>
-          <!-- <li>Projets</li> -->
-          <li v-on:click="switchInContact()">Contact</li>
+          <li class="elem-menu" v-on:click="switchInIndex()">Accueil</li>
+          <li class="elem-menu" v-on:click="switchInParcours()">Parcours</li>
+          <li class="elem-menu" v-on:click="switchInCompetences()">Compétences</li>
+          <!-- <li class="elem-menu">Projets</li> -->
+          <li class="elem-menu" v-on:click="switchInContact()">Contact</li>
         </ul>
       </nav>
     </div>
@@ -109,73 +109,51 @@ export default {
 </script>
 
 <style scoped>
-  body{
-    background-color: #f5eded;
-    /* background-color: white; */
-    font-family: 'Bookman', sans-serif;
-    overflow-x: hidden;
-  }
-
-  .page{
-    position: absolute;
-  }
-  /**************/
-  /* MENU PAGE */
-  /**************/
-
-  .menuPage{
-    width: 99vw;
-    height: 100vh;
-    position: absolute;
-    color: white;
-    font-size: 25px;
-    font-weight: bold;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-  .menuPage ul{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    color: #f5eded;
-  }
-  .menuPage li:hover{
-    border-bottom: solid white;
-    /* animation-name: animationNav; */
-    animation-duration: 2s;
-    animation-iteration-count: infinite;
-    animation-timing-function: ease-in;
-  }
-
-
-@keyframes animationNav{
-  0%{
-    border-bottom: solid black;
-  }
-  5%{
-    border-bottom: solid white;
-  }
-  100%{
-    border-bottom: solid black;
-  }
+body{
+  background-color: #f5eded;
+  /* background-color: white; */
+  font-family: 'Bookman', sans-serif;
+  overflow-x: hidden;
 }
-@keyframes hoverCards{
-    0%{
-        transform: translateY(0px);
-    }
-    25%{
-        transform: translateY(-10px);
-    }
-    50%{
-        transform: translateY(0px);
-    }
-    75%{
-        transform: translateY(10px);  
-    }
-    100%{
-        transform: translateY(0px);
-    }
+
+.page{
+  position: absolute;
+}
+/**************/
+/* MENU PAGE */
+/**************/
+
+.menuPage{
+  width: 99vw;
+  height: 100vh;
+  position: absolute;
+  color: white;
+  font-size: 25px;
+  font-weight: bold;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.menuPage ul{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: #f5eded;
+}
+.elem-menu:hover::after{
+  width: 100%;
+  transform: translateX(0%);
+}
+.elem-menu::after{
+  content: '';
+  width: 0%;
+  height: 3px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: white;
+  transform: translateX(80%);
+  transition: all 500ms ease;
 }
 
 @media (max-width: 680px) {

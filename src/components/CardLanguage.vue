@@ -96,14 +96,6 @@ li{
 .theback:hover{
   top: 0%;
 } 
-.thecard:root > .theback{
-  animation-name: hoverCard;
-  animation-timing-function: ease;
-  animation-duration: 1s;
-}
-.theback:root{
-  top: 0%;
-} 
 .theback a{
   color: white;
 }
