@@ -39,4 +39,20 @@ li{
   margin: 20px;
 }
 
+
+@media (max-width: 679px) {
+ 
+}
+@media (min-width: 680px) and (max-width: 1299px) {
+
+}
+
+@media (min-width: 1300px) and (max-width: 1799px) {
+
+}
+
+@media (min-width: 1800px) {
+
+}
+
 </style>

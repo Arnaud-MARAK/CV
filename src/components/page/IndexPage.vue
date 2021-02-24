@@ -78,12 +78,12 @@ header .btnMenu:hover > .barre-hamburger {
     width: 100%;
   }
   100% {
-    margin-top: 5px;
+    margin-top: 3px;
     width: 66%;
   }
 }
 
-@media (max-width: 680px) {
+@media (max-width: 679px) {
   h1 {
     font-size: 30px;
   }
@@ -104,22 +104,17 @@ header .btnMenu:hover > .barre-hamburger {
     margin-top: 4vh;
   }
   .barre-hamburger {
-    border-top: 2px solid black;
-    margin-top: 7px;
-  }
-  header .btnMenu:hover > .barre-hamburger {
-    animation-name: animationHamburgerSmall;
-    margin-top: 5px;
-    width: 66%;
+    border-top: 3px solid black;
+    margin-top: 10px;
   }
 }
 
-@media (min-width: 681px) and (max-width: 1279px) {
+@media (min-width: 680px) and (max-width: 1299px) {
   h1 {
-    font-size: 40px;
+    font-size: 42px;
   }
   h2 {
-    font-size: 28px;
+    font-size: 30px;
     margin-top: 12vh;
     margin-left: 12vw;
   }
@@ -138,9 +133,9 @@ header .btnMenu:hover > .barre-hamburger {
   }
 }
 
-@media (min-width: 1280px) {
+@media (min-width: 1300px) and (max-width: 1799px) {
   h1 {
-    font-size: 50px;
+    font-size: 55px;
   }
   h2 {
     font-size: 35px;
@@ -149,6 +144,30 @@ header .btnMenu:hover > .barre-hamburger {
   }
   header .btnMenu {
     width: 50px;
+  }
+  .barre-hamburger {
+    border-top: 4px solid black;
+    margin-top: 15px;
+  }
+  header .btnMenu:hover > .barre-hamburger {
+    animation-name: animationHamburger;
+    margin-top: 10px;
+    width: 66%;
+  }
+}
+
+@media (min-width: 1800px) {
+  h1 {
+    font-size: 65px;
+  }
+  h2 {
+    font-size: 50px;
+    margin-top: 12vh;
+    margin-left: 12vw;
+  }
+  header .btnMenu {
+    width: 50px;
+    margin-bottom: 50px;
   }
   .barre-hamburger {
     border-top: 4px solid black;

@@ -132,7 +132,6 @@ body {
   height: 100vh;
   position: absolute;
   color: white;
-  font-size: 25px;
   font-weight: bold;
   display: flex;
   justify-content: center;
@@ -160,21 +159,39 @@ body {
   transition: all 500ms ease;
 }
 
-@media (max-width: 680px) {
+@media (max-width: 679px) {
   .menuPage {
-    font-size: 17px;
+    font-size: 24px;
+  }
+  .elem-menu::after {
+    height: 3px;
   }
 }
 
-@media (min-width: 681px) and (max-width: 1279px) {
+@media (min-width: 680px) and (max-width: 1299px) {
   .menuPage {
-    font-size: 23px;
+    font-size: 28px;
+  }
+  .elem-menu::after {
+    height: 3px;
   }
 }
 
-@media (min-width: 1280px) {
+@media (min-width: 1300px) and (max-width: 1799px) {
   .menuPage {
-    font-size: 25px;
+    font-size: 34px;
+  }
+  .elem-menu::after {
+    height: 4px;
+  }
+}
+
+@media (min-width: 1800px) {
+  .menuPage {
+    font-size: 40px;
+  }
+  .elem-menu::after {
+    height: 5px;
   }
 }
 </style>
