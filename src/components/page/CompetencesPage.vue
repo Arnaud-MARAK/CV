@@ -64,7 +64,7 @@ export default {
           imgUrl:
             "https://sdtimes.com/wp-content/uploads/2018/01/bootstrap-stack.png",
           description:
-            "Bootstrap est un framework qui permet de concevoir plus rapidement un design responsive d'une page web.",
+            "Bootstrap est un framework qui permet de concevoir plus rapidement le design d'une page web.",
           wikipedia: "https://fr.wikipedia.org/wiki/Bootstrap_(framework)",
         },
         {
@@ -80,7 +80,7 @@ export default {
           imgUrl:
             "https://upload.wikimedia.org/wikipedia/commons/thumb/9/95/Vue.js_Logo_2.svg/1200px-Vue.js_Logo_2.svg.png",
           description:
-            "Vue est un framework qui permet de programmer l'interface visuel d’un site web.",
+            "Vue est un framework qui permet de développer plus rapidement l'interface visuel d’un site web réactif.",
           wikipedia: "https://fr.wikipedia.org/wiki/Vue.js",
         },
         {
@@ -88,7 +88,7 @@ export default {
           imgUrl:
             "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/React-icon.svg/1200px-React-icon.svg.png",
           description:
-            "Vue est un framework qui permet de programmer l'interface visuel d’un site web.",
+            "React est un framework qui permet de développer plus rapidement l'interface visuel d’un site web réactif.",
 
           wikipedia: "https://fr.wikipedia.org/wiki/React_(JavaScript)",
         },
@@ -115,14 +115,6 @@ export default {
           description:
             "Wordpress est un logiciel de système de gestion de contenu qui permet de créer des sites internets complets.",
           wikipedia: "https://fr.wikipedia.org/wiki/WordPress",
-        },
-        {
-          title: "Docker",
-          imgUrl:
-            "https://mountainss.files.wordpress.com/2017/01/docker-logo.png",
-          description:
-            "Docker est un logiciel qui permet de concevoir, tester et développer rapidement des applications dans des conteneurs logiciel.",
-          wikipedia: "https://fr.wikipedia.org/wiki/Docker_%28logiciel%29",
         },
         {
           title: "Java",
@@ -171,6 +163,14 @@ export default {
           description:
             "Bash est un langage script qui permet d'interpréter et d'utiliser des commandes Linux.",
           wikipedia: "https://fr.wikipedia.org/wiki/Bourne-Again_shell",
+        },
+        {
+          title: "Docker",
+          imgUrl:
+            "https://mountainss.files.wordpress.com/2017/01/docker-logo.png",
+          description:
+            "Docker est un logiciel qui permet de concevoir, tester et développer rapidement des applications dans des conteneurs logiciel.",
+          wikipedia: "https://fr.wikipedia.org/wiki/Docker_%28logiciel%29",
         },
         {
           title: "Git",

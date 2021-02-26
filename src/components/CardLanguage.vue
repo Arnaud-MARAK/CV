@@ -86,11 +86,10 @@ li {
   background-color: #ff5f1a;
   color: #fff;
   text-align: center;
+  transition: top 1s ease;
 }
 .thecard:hover > .theback {
-  animation-name: hoverCard;
-  animation-timing-function: ease;
-  animation-duration: 1s;
+  top: 0%;
 }
 .theback:hover {
   top: 0%;
@@ -110,15 +109,6 @@ li {
   padding: 15px;
   font-weight: normal;
   font-size: 13px;
-}
-@keyframes hoverCard {
-  0% {
-    top: 100%;
-  }
-
-  100% {
-    top: 0%;
-  }
 }
 
 @media (max-width: 680px) {
