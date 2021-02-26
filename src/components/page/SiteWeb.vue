@@ -67,9 +67,9 @@ export default {
     };
   },
   mounted() {
-    // this.switchInIndex();
+    this.switchInIndex();
     // this.switchInParcours()
-    this.switchInCompetences();
+    // this.switchInCompetences();
     // this.switchInContact()
   },
   methods: {
@@ -151,7 +151,6 @@ body {
   flex-direction: column;
   align-items: center;
   color: #f5eded;
-  font-size: 60px;
 }
 
 .stroke-effect {
@@ -190,5 +189,42 @@ body {
   z-index: 1;
   clip-path: inset(100% 0 0 0);
   transition: clip-path 1600ms ease;
+}
+
+@media (max-width: 679px) {
+  .elem-menu {
+    font-size: 28px;
+  }
+  .fill-effect-stroke {
+    color: white;
+    -webkit-text-stroke-width: 0px;
+  }
+}
+
+@media (min-width: 680px) and (max-width: 1299px) {
+  .elem-menu {
+    font-size: 42px;
+  }
+  .fill-effect-stroke {
+    -webkit-text-stroke-width: 1px;
+  }
+}
+
+@media (min-width: 1300px) and (max-width: 1799px) {
+  .elem-menu {
+    font-size: 60px;
+  }
+  .fill-effect-stroke {
+    -webkit-text-stroke-width: 2px;
+  }
+}
+
+@media (min-width: 1800px) {
+  .elem-menu {
+    font-size: 74px;
+  }
+  .fill-effect-stroke {
+    -webkit-text-stroke-width: 2.5px;
+  }
 }
 </style>
