@@ -5,22 +5,13 @@
     <div v-if="showMenu" class="menuPage">
       <nav>
         <ul>
-          <li class="elem-menu fill-effect" v-on:click="switchInIndex()">
-            <p class="fill-effect-stroke">Accueil</p>
-            <p class="fill-effect-fill">Accueil</p>
+          <li class="elem-menu" v-on:click="switchInIndex()">Accueil</li>
+          <li class="elem-menu" v-on:click="switchInParcours()">Parcours</li>
+          <li class="elem-menu" v-on:click="switchInCompetences()">
+            Compétences
           </li>
-          <li class="elem-menu fill-effect" v-on:click="switchInParcours()">
-            <p class="fill-effect-stroke">Parcours</p>
-            <p class="fill-effect-fill">Parcours</p>
-          </li>
-          <li class="elem-menu fill-effect" v-on:click="switchInCompetences()">
-            <p class="fill-effect-stroke">Compétences</p>
-            <p class="fill-effect-fill">Compétences</p>
-          </li>
-          <li class="elem-menu fill-effect" v-on:click="switchInContact()">
-            <p class="fill-effect-stroke">Contact</p>
-            <p class="fill-effect-fill">Contact</p>
-          </li>
+          <!-- <li class="elem-menu">Projets</li> -->
+          <li class="elem-menu" v-on:click="switchInContact()">Contact</li>
         </ul>
       </nav>
     </div>
@@ -67,9 +58,9 @@ export default {
     };
   },
   mounted() {
-    // this.switchInIndex();
+    this.switchInIndex();
     // this.switchInParcours()
-    this.switchInCompetences();
+    // this.switchInCompetences()
     // this.switchInContact()
   },
   methods: {
@@ -151,44 +142,56 @@ body {
   flex-direction: column;
   align-items: center;
   color: #f5eded;
-  font-size: 60px;
+}
+.elem-menu:hover::after {
+  width: 100%;
+  transform: translateX(0%);
+}
+.elem-menu::after {
+  content: "";
+  width: 0%;
+  height: 3px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: white;
+  transform: translateX(200%);
+  transition: all 500ms ease;
 }
 
-.stroke-effect {
-  -webkit-text-stroke-width: 2px;
-  -webkit-text-stroke-color: white;
-  color: rgba(255, 255, 255, 0);
-  transition: opacity 400ms ease, color 1400ms;
-  transition-delay: 0s, 200ms;
-  transition-property: opacity, color;
-  opacity: 0.5;
+@media (max-width: 679px) {
+  .menuPage {
+    font-size: 24px;
+  }
+  .elem-menu::after {
+    height: 3px;
+  }
 }
-.stroke-effect:hover {
-  opacity: 1;
-  color: rgba(255, 255, 255, 1);
+
+@media (min-width: 680px) and (max-width: 1299px) {
+  .menuPage {
+    font-size: 28px;
+  }
+  .elem-menu::after {
+    height: 3px;
+  }
 }
-.fill-effect {
-  position: relative;
+
+@media (min-width: 1300px) and (max-width: 1799px) {
+  .menuPage {
+    font-size: 34px;
+  }
+  .elem-menu::after {
+    height: 4px;
+  }
 }
-.fill-effect:hover > .fill-effect-stroke {
-  visibility: hidden;
-}
-.fill-effect:hover > .fill-effect-fill {
-  clip-path: inset(0 0 0 0);
-}
-.fill-effect-stroke {
-  position: absolute;
-  visibility: visible;
-  color: rgba(255, 255, 255, 0);
-  -webkit-text-stroke-width: 2px;
-  -webkit-text-stroke-color: white;
-  z-index: 2;
-  transition: visibility 0.8s;
-}
-.fill-effect-fill {
-  color: white;
-  z-index: 1;
-  clip-path: inset(100% 0 0 0);
-  transition: clip-path 1600ms ease;
+
+@media (min-width: 1800px) {
+  .menuPage {
+    font-size: 40px;
+  }
+  .elem-menu::after {
+    height: 5px;
+  }
 }
 </style>
