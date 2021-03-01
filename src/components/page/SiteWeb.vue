@@ -201,7 +201,17 @@ body {
   }
 }
 
-@media (min-width: 680px) and (max-width: 1299px) {
+@media (min-width: 680px) and (max-width: 999px) {
+  .elem-menu {
+    font-size: 34px;
+  }
+  .fill-effect-stroke {
+    color: white;
+    -webkit-text-stroke-width: 0px;
+  }
+}
+
+@media (min-width: 1000px) and (max-width: 1399px) {
   .elem-menu {
     font-size: 42px;
   }
@@ -210,7 +220,7 @@ body {
   }
 }
 
-@media (min-width: 1300px) and (max-width: 1799px) {
+@media (min-width: 1400px) and (max-width: 1799px) {
   .elem-menu {
     font-size: 60px;
   }
