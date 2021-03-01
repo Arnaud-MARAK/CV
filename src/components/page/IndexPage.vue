@@ -113,7 +113,7 @@ header .btnMenu:hover > .barre-hamburger {
 @media screen and (min-width: 680px) and (max-width: 999px) {
   h1 {
     font-size: 42px;
-    color: yellow;
+    /* color: yellow; */
   }
   h2 {
     font-size: 30px;
@@ -138,7 +138,7 @@ header .btnMenu:hover > .barre-hamburger {
 @media screen and (min-width: 1000px) and (max-width: 1399px) {
   h1 {
     font-size: 48px;
-    color: brown;
+    /* color: brown; */
   }
   h2 {
     font-size: 32px;
@@ -163,7 +163,7 @@ header .btnMenu:hover > .barre-hamburger {
 @media screen and (min-width: 1400px) and (max-width: 1799px) {
   h1 {
     font-size: 55px;
-    color: pink;
+    /* color: pink; */
   }
   h2 {
     font-size: 35px;
@@ -187,7 +187,7 @@ header .btnMenu:hover > .barre-hamburger {
 @media screen and (min-width: 1800px) {
   h1 {
     font-size: 65px;
-    color: blue;
+    /* color: blue; */
   }
   h2 {
     font-size: 50px;
