@@ -13,32 +13,32 @@
     <div class="formulaire">
       <h2>Vous souhaitez me poser une question ou autre ?</h2>
       <p>arnaudmarak@tutanota.com</p>
-      <a href="mailto:arnaudmarak@tutanota.com"><button>M'envoyer un mail</button></a>
+      <a href="mailto:arnaudmarak@tutanota.com"
+        ><button>M'envoyer un mail</button></a
+      >
     </div>
   </div>
 </template>
 
 <script>
-
 export default {
-  name: 'ContactPage',
+  name: "ContactPage",
   methods: {
     switchInMenu() {
-      this.$emit('back');
-    }
-  }
-}
+      this.$emit("back");
+    },
+  },
+};
 </script>
 
 <style scoped>
-
-.contactPage{
+.contactPage {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
 }
-header{
+header {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -46,7 +46,7 @@ header{
   width: 100vw;
   z-index: 3;
 }
-header .btnMenu{
+header .btnMenu {
   position: absolute;
   background-size: cover;
   right: 5vw;
@@ -55,10 +55,10 @@ header .btnMenu{
   justify-content: center;
   align-items: center;
 }
-.barre-hamburger{
+.barre-hamburger {
   width: 100%;
 }
-header .btnMenu:hover > .barre-hamburger{
+header .btnMenu:hover > .barre-hamburger {
   animation-duration: 0.8s;
   animation-timing-function: ease;
 }
@@ -72,7 +72,7 @@ header .btnMenu:hover > .barre-hamburger{
   justify-content: flex-end;
   align-items: flex-end;
 }
-.formulaire{
+.formulaire {
   height: 70vh;
   width: 99vw;
   display: flex;
@@ -80,61 +80,60 @@ header .btnMenu:hover > .barre-hamburger{
   align-items: center;
   z-index: 3;
 }
-.formulaire p{
+.formulaire p {
   margin-top: 5vh;
 }
-.formulaire button{
-  background-color: #94D5F1;
+.formulaire button {
+  background-color: #94d5f1;
   border: none;
   border-radius: 3px;
   font-size: 15px;
   font-weight: bold;
-  height: 6vh;
   margin: 2vh 0 0 0;
-  padding: 1vh 1vw;
+  padding: 10px 15px;
 }
-.formulaire button:hover{
+.formulaire button:hover {
   background-color: #bbe5f6;
 }
 
-@keyframes animationHamburger{
-  0%{
+@keyframes animationHamburger {
+  0% {
     margin-top: 15px;
     width: 100%;
   }
-  100%{
+  100% {
     margin-top: 10px;
     width: 66%;
   }
 }
 
-@keyframes animationHamburgerSmall{
-  0%{
+@keyframes animationHamburgerSmall {
+  0% {
     margin-top: 7px;
     width: 100%;
   }
-  100%{
+  100% {
     margin-top: 5px;
     width: 66%;
   }
 }
 
-@media (max-width: 680px) {
-  h1{
+@media screen and (max-width: 680px) {
+  h1 {
     font-size: 30px;
   }
-  h2{
+  h2 {
     font-size: 16px;
     margin-right: 25vw;
   }
-  header .btnMenu{
+  header .btnMenu {
     width: 25px;
   }
-  .barre-hamburger{
+  .barre-hamburger {
     border-top: 2px solid black;
     margin-top: 7px;
   }
-  header .btnMenu:hover > .barre-hamburger{
+  header .btnMenu:hover > .barre-hamburger {
     animation-name: animationHamburgerSmall;
     margin-top: 5px;
     width: 66%;
@@ -143,68 +142,67 @@ header .btnMenu:hover > .barre-hamburger{
     margin-left: 3vw;
     align-items: flex-start;
   }
-  .formulaire p{
+  .formulaire p {
     font-size: 12px;
     margin-top: 5vh;
   }
-  .formulaire button{
+  .formulaire button {
     font-size: 10px;
     padding: 1vh 2vw;
   }
 }
 
-@media (min-width: 681px) and (max-width: 1279px) {
-  h1{
+@media screen and (min-width: 681px) and (max-width: 1279px) {
+  h1 {
     font-size: 40px;
   }
-  h2{
+  h2 {
     font-size: 20px;
   }
-  header .btnMenu{
+  header .btnMenu {
     width: 45px;
   }
-  .barre-hamburger{
+  .barre-hamburger {
     border-top: 4px solid black;
     margin-top: 15px;
   }
-  header .btnMenu:hover > .barre-hamburger{
+  header .btnMenu:hover > .barre-hamburger {
     animation-name: animationHamburger;
     margin-top: 10px;
     width: 66%;
   }
-  .formulaire p{
+  .formulaire p {
     font-size: 18px;
   }
-  .formulaire button{
+  .formulaire button {
     font-size: 14px;
   }
 }
 
-@media (min-width: 1280px) {
-  h1{
+@media screen and (min-width: 1280px) {
+  h1 {
     font-size: 50px;
   }
-  h2{
+  h2 {
     font-size: 25px;
   }
-  header .btnMenu{
+  header .btnMenu {
     width: 50px;
   }
-  .barre-hamburger{
+  .barre-hamburger {
     border-top: 4px solid black;
     margin-top: 15px;
   }
-  header .btnMenu:hover > .barre-hamburger{
+  header .btnMenu:hover > .barre-hamburger {
     animation-name: animationHamburger;
     margin-top: 10px;
     width: 66%;
   }
-  .formulaire p{
+  .formulaire p {
     font-size: 20px;
   }
-  .formulaire button{
+  .formulaire button {
     font-size: 15px;
   }
 }
-
 </style>

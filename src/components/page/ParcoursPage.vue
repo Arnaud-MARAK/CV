@@ -1,58 +1,87 @@
 <template>
   <div class="parcoursPage">
     <header>
-        <div class="btnMenu" v-on:click="switchInMenu()">
-          <div class="barre-hamburger"></div>
-          <div class="barre-hamburger"></div>
-          <div class="barre-hamburger"></div>
-        </div>
+      <div class="btnMenu" v-on:click="switchInMenu()">
+        <div class="barre-hamburger"></div>
+        <div class="barre-hamburger"></div>
+        <div class="barre-hamburger"></div>
+      </div>
     </header>
     <div class="title">
       <h1>Mon parcours</h1>
     </div>
-    
+
     <section class="timeline">
       <ul>
         <li>
-            <div>
+          <div>
             <time>
-                <p>2015-2018 - Bac S SI</p>
+              <p>2015-2018 - Bac S SI</p>
             </time>
             <p>
-                J'ai effectué un Bac Scientifique option Sciences de l'Ingénieur au lycée Le Corbusier à Illkirch. 
-                J'ai par ailleurs suivi l'option M-SIAD (Métiers des Sciences de l'Innovation de l'Artchitecture et du Design) durant mon année de seconde.
+              J'ai effectué un Bac Scientifique option Sciences de l'Ingénieur
+              au lycée Le Corbusier à Illkirch. J'ai par ailleurs suivi l'option
+              M-SIAD (Métiers des Sciences de l'Innovation de l'Artchitecture et
+              du Design) durant mon année de seconde.
             </p>
-            <a href="https://www.lyceelecorbusier.eu/" target="_blank"><h5>Site web de l'établissement</h5></a>
-            </div>
+            <a href="https://www.lyceelecorbusier.eu/" target="_blank"
+              ><h5>Site web de l'établissement</h5></a
+            >
+          </div>
         </li>
         <li>
-            <div>
+          <div>
             <time>
-                <p>2018-2020 - DUT Informatique</p>
+              <p>2018-2020 - DUT Informatique</p>
             </time>
             <p>
-                Je me suis ensuite tourné vers le secteur de l'informatique en choisissant l'IUT Robert Schuman à Illkirch,
-                domaine dans lequel j'ai toujours éprouvé un fort intérêt, pour poursuivre mes études. J'ai aussi dû durant cette période
-                réalisé un stage de 11 semaines à l'agence web 
-                <a href="https://www.dnconsultants.fr/" target="_blank" style="font-weight: bold; font-size: 14px;">DN Consultants</a> situé à Strasbourg.
-                Ce stage m'a permit d'avoir une première expérience professionnelle dans le développement web, domaine que j'affectais particulièrement. 
+              Je me suis ensuite tourné vers le secteur de l'informatique en
+              choisissant l'IUT Robert Schuman à Illkirch, domaine dans lequel
+              j'ai toujours éprouvé un fort intérêt, pour poursuivre mes études.
+              J'ai aussi dû durant cette période réalisé un stage de 11 semaines
+              à l'agence web
+              <a
+                href="https://www.dnconsultants.fr/"
+                target="_blank"
+                style="font-weight: bold; font-size: 14px"
+                >DN Consultants</a
+              >
+              situé à Strasbourg. Ce stage m'a permit d'avoir une première
+              expérience professionnelle dans le développement web, domaine que
+              j'affectais particulièrement.
             </p>
-            <a  href="https://iutrs.unistra.fr/formation/dut/dut-informatique" target="_blank"><h5>Site web de la formation</h5></a>
-            </div>
+            <a
+              href="https://iutrs.unistra.fr/formation/dut/dut-informatique"
+              target="_blank"
+              ><h5>Site web de la formation</h5></a
+            >
+          </div>
         </li>
         <li>
-            <div>
+          <div>
             <time>
-                <p>2020-2021 - Licence Pro CDAD</p>
+              <p>2020-2021 - Licence Pro CDAD</p>
             </time>
             <p>
-                Puis je me suis spécialisé dans le développement web et d'applications en intégrant la Licence Professionnelle CDAD
-                (Conception et Développement d'Applications Distribuées) de l'IUT Robert Schuman à Illkirch. Je suis en train de faire cette licence en 
-                alternance dans l'agence web 
-                <a href="https://www.dnconsultants.fr/" target="_blank" style="font-weight: bold; font-size: 14px;">DN Consultants</a> situé à Strasbourg.
+              Puis je me suis spécialisé dans le développement web et
+              d'applications en intégrant la Licence Professionnelle CDAD
+              (Conception et Développement d'Applications Distribuées) de l'IUT
+              Robert Schuman à Illkirch. Je suis en train de faire cette licence
+              en alternance dans l'agence web
+              <a
+                href="https://www.dnconsultants.fr/"
+                target="_blank"
+                style="font-weight: bold; font-size: 14px"
+                >DN Consultants</a
+              >
+              situé à Strasbourg.
             </p>
-            <a  href="https://iutrs.unistra.fr/formation/licence-professionnelle/informatique/cdad" target="_blank"><h5>Site web de la formation</h5></a>
-            </div>
+            <a
+              href="https://iutrs.unistra.fr/formation/licence-professionnelle/informatique/cdad"
+              target="_blank"
+              ><h5>Site web de la formation</h5></a
+            >
+          </div>
         </li>
       </ul>
     </section>
@@ -60,16 +89,15 @@
 </template>
 
 <script>
-
 export default {
-  name: 'ParcoursPage',
-  data: function() {
-    return{
+  name: "ParcoursPage",
+  data: function () {
+    return {
       lol: 1,
-      items: []
-    }
+      items: [],
+    };
   },
-  mounted(){
+  mounted() {
     this.items = document.querySelectorAll(".timeline li");
 
     window.addEventListener("load", this.callbackFunc);
@@ -82,27 +110,28 @@ export default {
       return (
         rect.top >= 0 &&
         rect.left >= 0 &&
-        rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
-        rect.right <= (window.innerWidth || document.documentElement.clientWidth)
+        rect.bottom <=
+          (window.innerHeight || document.documentElement.clientHeight) &&
+        rect.right <=
+          (window.innerWidth || document.documentElement.clientWidth)
       );
     },
     callbackFunc() {
       for (var i = 0; i < this.items.length; i++) {
         if (this.isElementInViewport(this.items[i])) {
-        this.items[i].classList.add("in-view");
+          this.items[i].classList.add("in-view");
         }
       }
     },
     switchInMenu() {
-      console.log('cool');
-      this.$emit('back');
-    }
-  }
-}
+      console.log("cool");
+      this.$emit("back");
+    },
+  },
+};
 </script>
 
 <style scoped>
-
 *,
 *::before,
 *::after {
@@ -110,7 +139,7 @@ export default {
   padding: 0;
   box-sizing: border-box;
 }
-.parcoursPage{
+.parcoursPage {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -118,7 +147,7 @@ export default {
   /* overflow: hidden; */
   z-index: 3;
 }
-header{
+header {
   width: 100%;
   display: flex;
   justify-content: flex-end;
@@ -133,7 +162,7 @@ header{
   align-items: flex-end;
   z-index: 3;
 }
-header .btnMenu{
+header .btnMenu {
   z-index: 3;
   width: 50px;
   background-size: cover;
@@ -143,34 +172,34 @@ header .btnMenu{
   justify-content: center;
   align-items: center;
 }
-.barre-hamburger{
+.barre-hamburger {
   width: 100%;
   border-top: 4px solid black;
   margin-top: 15px;
 }
-header .btnMenu:hover > .barre-hamburger{
+header .btnMenu:hover > .barre-hamburger {
   animation-name: animationHamburger;
   animation-duration: 0.8s;
   animation-timing-function: ease;
   margin-top: 10px;
   width: 66%;
 }
-@keyframes animationHamburger{
-  0%{
+@keyframes animationHamburger {
+  0% {
     margin-top: 15px;
     width: 100%;
   }
-  100%{
+  100% {
     margin-top: 10px;
     width: 66%;
   }
 }
-@keyframes animationHamburgerSmall{
-  0%{
+@keyframes animationHamburgerSmall {
+  0% {
     margin-top: 7px;
     width: 100%;
   }
-  100%{
+  100% {
     margin-top: 5px;
     width: 66%;
   }
@@ -179,8 +208,8 @@ header .btnMenu:hover > .barre-hamburger{
 /* TIMELINE
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
 .timeline {
-    color: white;
-    margin-top: 10vh;
+  color: white;
+  margin-top: 10vh;
 }
 .timeline ul {
   background: #cbd6e7;
@@ -195,7 +224,7 @@ header .btnMenu:hover > .barre-hamburger{
   background: #cbd6e7;
 }
 .timeline ul li::after {
-  content: '';
+  content: "";
   position: absolute;
   left: 50%;
   bottom: 0;
@@ -210,11 +239,11 @@ header .btnMenu:hover > .barre-hamburger{
   bottom: 0;
   width: 400px;
   padding: 15px;
-  background: #29ABE2;
+  background: #29abe2;
   /* background-color: #446491; */
 }
 .timeline ul li div::before {
-  content: '';
+  content: "";
   position: absolute;
   bottom: 7px;
   width: 0;
@@ -227,7 +256,7 @@ header .btnMenu:hover > .barre-hamburger{
 .timeline ul li:nth-child(even) div::before {
   left: -15px;
   border-width: 8px 16px 8px 0;
-  border-color: transparent #29ABE2 transparent transparent;
+  border-color: transparent #29abe2 transparent transparent;
 }
 .timeline ul li:nth-child(odd) div {
   left: -439px;
@@ -235,7 +264,7 @@ header .btnMenu:hover > .barre-hamburger{
 .timeline ul li:nth-child(odd) div::before {
   right: -15px;
   border-width: 8px 0 8px 16px;
-  border-color: transparent transparent transparent #29ABE2;
+  border-color: transparent transparent transparent #29abe2;
 }
 .timeline time {
   font-size: 1.2rem;
@@ -244,11 +273,11 @@ header .btnMenu:hover > .barre-hamburger{
   display: flex;
   align-items: center;
 }
-.timeline a{
+.timeline a {
   color: white;
 }
 
-.timeline li>div>p{
+.timeline li > div > p {
   margin-bottom: 10px;
 }
 
@@ -256,33 +285,33 @@ header .btnMenu:hover > .barre-hamburger{
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
 
 @media (max-width: 680px) {
-  h1{
+  h1 {
     font-size: 30px;
     position: absolute;
     width: 100vw;
     left: 10px;
   }
-  header .btnMenu{
+  header .btnMenu {
     width: 30px;
   }
-  .barre-hamburger{
+  .barre-hamburger {
     border-top: 2px solid black;
     margin-top: 7px;
   }
-  header .btnMenu:hover > .barre-hamburger{
+  header .btnMenu:hover > .barre-hamburger {
     animation-name: animationHamburgerSmall;
     margin-top: 5px;
     width: 66%;
   }
   .timeline {
     margin-left: 42vw;
-  }   
+  }
   .timeline ul {
     width: 0px;
   }
   .timeline ul li::after {
     width: 15px;
-    height:15px;
+    height: 15px;
   }
   .timeline ul li div {
     width: 200px;
@@ -296,7 +325,8 @@ header .btnMenu:hover > .barre-hamburger{
     display: flex;
     align-items: center;
   }
-  .timeline p a, h5 {
+  .timeline p a,
+  h5 {
     font-size: 13px;
   }
   .timeline ul li:nth-child(odd) div {
@@ -320,7 +350,7 @@ header .btnMenu:hover > .barre-hamburger{
 
 @media (min-width: 681px) {
   .timeline ul li::after {
-    transition: background .5s ease-in-out;
+    transition: background 0.5s ease-in-out;
     background-color: #446491;
   }
   .timeline ul li.in-view::after {
@@ -329,7 +359,7 @@ header .btnMenu:hover > .barre-hamburger{
   .timeline ul li div {
     visibility: hidden;
     opacity: 0;
-    transition: all .5s ease-in-out;
+    transition: all 0.5s ease-in-out;
   }
   .timeline ul li:nth-child(odd) div {
     transform: translate3d(200px, 0, 0);
@@ -344,16 +374,15 @@ header .btnMenu:hover > .barre-hamburger{
   }
 }
 
-@media (min-width: 681px) and (max-width: 1279px) {
-  h1{
-      font-size: 40px;
+@media screen and (min-width: 681px) and (max-width: 1279px) {
+  h1 {
+    font-size: 40px;
   }
 }
 
-@media (min-width: 1280px) {
-  h1{
+@media screen and (min-width: 1280px) {
+  h1 {
     font-size: 50px;
   }
 }
-
 </style>

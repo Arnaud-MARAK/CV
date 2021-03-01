@@ -269,7 +269,7 @@ header .btnMenu:hover > .barre-hamburger {
   }
 }
 
-@media (max-width: 680px) {
+@media screen and (max-width: 680px) {
   header {
     height: 20vh;
   }
@@ -291,13 +291,13 @@ header .btnMenu:hover > .barre-hamburger {
   }
 }
 
-@media (min-width: 681px) and (max-width: 1279px) {
+@media screen and (min-width: 681px) and (max-width: 1279px) {
   h1 {
     font-size: 40px;
   }
 }
 
-@media (min-width: 1280px) {
+@media screen and (min-width: 1280px) {
   h1 {
     font-size: 50px;
   }

@@ -83,7 +83,7 @@ header .btnMenu:hover > .barre-hamburger {
   }
 }
 
-@media (max-width: 679px) {
+@media screen and (max-width: 679px) {
   h1 {
     font-size: 30px;
     color: red;
@@ -110,7 +110,7 @@ header .btnMenu:hover > .barre-hamburger {
   }
 }
 
-@media (min-width: 680px) and (max-width: 1299px) {
+@media screen and (min-width: 680px) and (max-width: 1299px) {
   h1 {
     font-size: 42px;
     color: yellow;
@@ -135,7 +135,7 @@ header .btnMenu:hover > .barre-hamburger {
   }
 }
 
-@media (min-width: 1300px) and (max-width: 1799px) {
+@media screen and (min-width: 1300px) and (max-width: 1799px) {
   h1 {
     font-size: 55px;
     color: pink;
@@ -159,7 +159,7 @@ header .btnMenu:hover > .barre-hamburger {
   }
 }
 
-@media (min-width: 1800px) {
+@media screen and (min-width: 1800px) {
   h1 {
     font-size: 65px;
     font-size: 74px;

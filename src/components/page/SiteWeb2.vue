@@ -159,7 +159,7 @@ body {
   transition: all 500ms ease;
 }
 
-@media (max-width: 679px) {
+@media screen and (max-width: 679px) {
   .menuPage {
     font-size: 24px;
   }
@@ -168,7 +168,7 @@ body {
   }
 }
 
-@media (min-width: 680px) and (max-width: 1299px) {
+@media screen and (min-width: 680px) and (max-width: 1299px) {
   .menuPage {
     font-size: 28px;
   }
@@ -177,7 +177,7 @@ body {
   }
 }
 
-@media (min-width: 1300px) and (max-width: 1799px) {
+@media screen and (min-width: 1300px) and (max-width: 1799px) {
   .menuPage {
     font-size: 34px;
   }
@@ -186,7 +186,7 @@ body {
   }
 }
 
-@media (min-width: 1800px) {
+@media screen and (min-width: 1800px) {
   .menuPage {
     font-size: 40px;
   }
