@@ -221,7 +221,7 @@ body {
 
 @media (min-width: 1800px) {
   .elem-menu {
-    font-size: 74px;
+    color: blue;
   }
   .fill-effect-stroke {
     -webkit-text-stroke-width: 2.5px;
