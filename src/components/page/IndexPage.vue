@@ -86,7 +86,7 @@ header .btnMenu:hover > .barre-hamburger {
 @media screen and (max-width: 679px) {
   h1 {
     font-size: 30px;
-    color: red;
+    /* color: red; */
   }
   h2 {
     font-size: 20px;
