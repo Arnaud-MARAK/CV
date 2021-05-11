@@ -119,7 +119,7 @@ export default {
         {
           title: "Java",
           imgUrl:
-            "https://www.softexia.com/wp-content/uploads/2017/04/Java-logo.png",
+            "https://upload.wikimedia.org/wikipedia/fr/2/2e/Java_Logo.svg",
           description:
             "Java est un langage de programmation orienté objet, il est polyvalent et permet de créer des applications complètes sur n'importe quel système.",
 
